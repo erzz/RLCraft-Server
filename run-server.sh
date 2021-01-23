@@ -15,8 +15,9 @@ fi
 # Parameters from aikar's post:
 # https://aikar.co/2018/07/02/tuning-the-jvm-g1gc-garbage-collector-flags-for-minecraft/
 java -Xms${RAM:-$DEFAULT_RAM} -Xmx${RAM:-$DEFAULT_RAM} \
-     -XX:+UseG1GC -XX:+ParallelRefProcEnabled \
-     -XX:MaxGCPauseMillis=200 \
+     -XX:+UseG1GC \
+     -XX:+ParallelRefProcEnabled \
+     -XX:MaxGCPauseMillis=100 \
      -XX:+UnlockExperimentalVMOptions \
      -XX:+DisableExplicitGC \
      -XX:+AlwaysPreTouch \
@@ -25,11 +26,17 @@ java -Xms${RAM:-$DEFAULT_RAM} -Xmx${RAM:-$DEFAULT_RAM} \
      -XX:G1HeapRegionSize=8M \
      -XX:G1ReservePercent=20 \
      -XX:G1HeapWastePercent=5 \
-     -XX:G1MixedGCCountTarget=4 \
+     -XX:G1MixedGCCountTarget=8 \
      -XX:InitiatingHeapOccupancyPercent=15 \
      -XX:G1MixedGCLiveThresholdPercent=90 \
      -XX:G1RSetUpdatingPauseTimePercent=5 \
      -XX:SurvivorRatio=32 \
      -XX:+PerfDisableSharedMem \
      -XX:MaxTenuringThreshold=1 \
+     -XX:+UseLargePages \
+     -XX:+UseLargePagesInMetaspace \
+     -XX:LargePageSizeInBytes=2m \
+     -XX:-OmitStackTraceInFastThrow \
+     -Dusing.aikars.flags=true \
+     -Daikars.new.flags=true \
      -jar server.jar nogui
