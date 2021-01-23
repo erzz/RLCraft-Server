@@ -9,12 +9,13 @@ RUN /start.sh
 FROM openjdk:8-jre-slim AS server-install
 COPY --from=base /server /server/
 WORKDIR /server
-COPY /server.properties .
+COPY server.properties ops.json /server/
 RUN java -jar installer.jar --installServer \
     && rm -rf installer* \
     && ln -s forge-*.jar server.jar
 
 FROM openjdk:8-jre-slim
+RUN apt update && apt install -y screen
 COPY run-server.sh /
 COPY --from=server-install /server /server/
 RUN adduser --system --group forge && \
