@@ -20,7 +20,7 @@ COPY run-server.sh /
 COPY --from=server-install /server /server/
 RUN adduser --system --group forge && \
     chmod +x run-server.sh && \
-    mkdir -p /server/server-data && \
+    mkdir -p /server/world && \
     chown -R forge:forge /server
 USER forge
 WORKDIR /server
