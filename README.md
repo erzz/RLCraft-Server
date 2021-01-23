@@ -54,3 +54,6 @@ docker run -dit -e EULA=true -v ~/world:/server/world -p 25565:25565 rl:latest
   https://aikar.co/2018/07/02/tuning-the-jvm-g1gc-garbage-collector-flags-for-minecraft/
 - Crontab<br>
   https://www.adminschoice.com/crontab-quick-reference
+- Change MOTD<br>
+  https://mctools.org/motd-creator
+  
