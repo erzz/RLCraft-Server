@@ -38,9 +38,6 @@ java -Xms${RAM:-$DEFAULT_RAM} -Xmx${RAM:-$DEFAULT_RAM} \
      -XX:SurvivorRatio=32 \
      -XX:+PerfDisableSharedMem \
      -XX:MaxTenuringThreshold=1 \
-     -XX:+UseLargePages \
-     -XX:+UseLargePagesInMetaspace \
-     -XX:LargePageSizeInBytes=2m \
      -XX:-OmitStackTraceInFastThrow \
      -Dusing.aikars.flags=true \
      -Daikars.new.flags=true \
