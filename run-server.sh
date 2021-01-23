@@ -1,6 +1,11 @@
 #!/bin/sh
 
-DEFAULT_RAM=6G
+# Use RAM environment variable, else set a default 
+if [ -z "$RAM" ]; then
+  DEFAULT_RAM=6G
+else
+  DEFAULT_RAM="$RAM"
+fi
 
 if [ ! -f eula.txt ]; then
      if [ "$EULA" != "" ]; then
