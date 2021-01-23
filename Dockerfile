@@ -15,10 +15,12 @@ RUN java -jar installer.jar --installServer \
     && ln -s forge-*.jar server.jar
 
 FROM openjdk:8-jre-slim
-RUN apt update && apt install -y screen procps
 COPY run-server.sh /
 COPY --from=server-install /server /server/
-RUN adduser --system --group forge && \
+RUN apt update && \
+    apt install -y screen procps && \
+    rm -rf /var/lib/apt/lists/* && \
+    adduser --system --group forge && \
     chmod +x run-server.sh && \
     mkdir -p /server/world && \
     chown -R forge:forge /server
