@@ -20,7 +20,7 @@ COPY --from=server-install /server /server/
 RUN apt update && \
     apt install -y screen procps && \
     rm -rf /var/lib/apt/lists/* && \
-    adduser --system --group forge && \
+    adduser --uid 101 --system --group forge && \
     chmod +x run-server.sh && \
     mkdir -p /server/world && \
     chown -R forge:forge /server

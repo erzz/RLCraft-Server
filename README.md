@@ -23,7 +23,7 @@ For quickest start with 6GB RAM allocated to the Minecraft Server JVM:
 1. SSH into server
 ```bash
 docker pull eu.gcr.io/mc-rlcraft/rlcraft:latest
-mkdir ~/world
+mkdir ~/world && chmod -R 101:101 ~/world
 docker run -dit -e EULA=true -v ~/world:/server/world -p 25565:25565 eu.gcr.io/mc-rlcraft/rlcraft:latest
 ```
 **NOTE**: By providing EULA=TRUE you agree to the EULA at https://account.mojang.com/documents/minecraft_eula
@@ -37,7 +37,7 @@ docker run -dit -e EULA=true -v ~/world:/server/world -p 25565:25565 eu.gcr.io/m
 cd &&
 git clone https://github.com/erzz/RLCraft-Server.git
 docker build -t rl:latest .
-mkdir ~/world
+mkdir ~/world && chmod -R 101:101 ~/world
 docker run -dit -e EULA=true -v ~/world:/server/world -p 25565:25565 rl:latest
 ```
 **NOTE**: By providing EULA=TRUE you agree to the EULA at https://account.mojang.com/documents/minecraft_eula
@@ -56,4 +56,3 @@ docker run -dit -e EULA=true -v ~/world:/server/world -p 25565:25565 rl:latest
   https://www.adminschoice.com/crontab-quick-reference
 - Change MOTD<br>
   https://mctools.org/motd-creator
-  
