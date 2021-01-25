@@ -1,10 +1,10 @@
 FROM alpine:3.12 AS base
 RUN apk add curl
-COPY start.sh /
+COPY installRLCraft.sh /
 RUN mkdir server \
-    && chmod +x start.sh
+    && chmod +x installRLCraft.sh
 WORKDIR /server
-RUN /start.sh
+RUN /installRLCraft.sh
 
 FROM openjdk:8-jre-slim AS server-install
 COPY --from=base /server /server/
