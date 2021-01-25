@@ -1,3 +1,5 @@
+![master](https://github.com/erzz/RLCraft-Server/workflows/RLCraft%20Tests/badge.svg?branch=master) 
+
 # RLCraft Server
 
 Docker image for the Forge modded server with RLCraft installed.
