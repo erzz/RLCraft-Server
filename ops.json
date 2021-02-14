@@ -1,10 +1,13 @@
 [
   {
    "uuid": "52cc2a6c-dee7-4acb-a943-c0a2fd9bc4f2",
-   "name": "tombomdotcom"
+   "name": "tombomdotcom",
+   "level": 3,
+   "bypassesPlayerLimit": true
   },
   {
    "uuid": "a7ac24c6-dd4d-4a8c-9dfe-e36af9b4d757",
-   "name": "_Noob_Ops_"
+   "name": "_Noob_Ops_",
+   "level": 3
   }
  ]
