@@ -1,4 +1,4 @@
-FROM alpine:3.12 AS base
+FROM alpine:3.13 AS base
 RUN apk add curl
 COPY installRLCraft.sh /
 RUN mkdir server \
