@@ -22,4 +22,4 @@ jobs:
           password: ${{ secrets.GCR_KEY }}
 
       - name: Push to GCR
-        run: docker push eu.gcr.io/mc-rlcraft/rlcraft
+        run: docker push eu.gcr.io/mc-rlcraft/rlcraft:${GITHUB_SHA::8}
