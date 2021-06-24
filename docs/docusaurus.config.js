@@ -14,9 +14,9 @@ module.exports = {
   projectName: 'RLCraft Server', // Usually your repo name.
   themeConfig: {
     navbar: {
-      title: 'My Site',
+      title: 'Bättra Docs',
       logo: {
-        alt: 'My Site Logo',
+        alt: 'Dabbing Unicorn',
         src: 'img/logo.svg',
       },
       items: [
@@ -24,11 +24,11 @@ module.exports = {
           type: 'doc',
           docId: 'intro',
           position: 'left',
-          label: 'Tutorial',
+          label: 'Docs',
         },
         {to: '/blog', label: 'Blog', position: 'left'},
         {
-          href: 'https://github.com/facebook/docusaurus',
+          href: 'https://github.com/ingka-group-digital/retail-pim-admin',
           label: 'GitHub',
           position: 'right',
         },
@@ -38,11 +38,11 @@ module.exports = {
       style: 'dark',
       links: [
         {
-          title: 'Docs',
+          title: 'Top Docs',
           items: [
             {
-              label: 'Tutorial',
-              to: '/docs/intro',
+              label: 'Getting Started',
+              to: '/docs/getting-started/local-dev/',
             },
           ],
         },
@@ -77,7 +77,7 @@ module.exports = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} The Rangers - pew pew`,
     },
     prism: {
       theme: lightCodeTheme,
